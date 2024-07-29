@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Job Listings</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+</head>
+<body>
+    <h1>Job Listings</h1>
+
+    {% for job in jobs %}
+    <div class="job">
+        <h2>{{ job.title }}</h2>
+        <div class="job-info"><strong>Date:</strong> {{ job.postdate|date:"Y-m-d H:i:s O" }}</div>
+        <div class="job-info"><strong>Reference Number:</strong> {{ job.jobid }}</div>
+        <div class="job-info"><strong>URL:</strong> <a href="job.eid.website">{{job.eid.website}}</a></div>
+        <div class="job-info"><strong>Company:</strong> {{ job.eid.companyname }}</div>
+        <div class="job-info"><strong>City:</strong> {{ job.eid.city }}</div>
+        <div class="job-info"><strong>State:</strong> {{ job.location }}</div>
+        <div class="job-info"><strong>Country:</strong> {{ job.eid.location }}</div>
+        <div class="job-info"><strong>Postal Code:</strong> {{ job.eid.pincode }}</div>
+        <div class="job-info"><strong>Salary:</strong> {{ job.basicpay }}</div>
+        <div class="job-info"><strong>Email:</strong> <a href="mailto:{{ job.eid.email }}">{{ job.eid.email }}</a></div>
+        <div class="job-info"><strong>Description:</strong> {{ job.jobdesc }}</div>
+        <div class="job-info"><strong>Job Type:</strong> {{ job.jobtype }}</div>
+    </div>
+    {% endfor %}
+</body>
+</html>

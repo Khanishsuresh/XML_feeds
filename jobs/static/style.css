@@ -1,0 +1,24 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    line-height: 1.6;
+}
+h1 {
+    text-align: center;
+}
+.job {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+.job h2 {
+    margin-top: 0;
+}
+.job-info {
+    margin: 5px 0;
+}
+.job-info strong {
+    display: inline-block;
+    width: 150px;
+}
