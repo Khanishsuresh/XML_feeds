@@ -6,6 +6,6 @@ from jobs import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('jobs/', include('jobs.urls')),  # Routes to job-related URLs
-    path('', views.home, name='home'),    # The root URL should route to the home view
+    path('jobs/', include('jobs.urls')),  
+    path('', views.home, name='home'),  
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
